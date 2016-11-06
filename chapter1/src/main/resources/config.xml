@@ -4,5 +4,6 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean name="product" class="learn.bean.Product"/>
+    <bean id="localDate" class="java.time.LocalDate" factory-method="now"/>
 
 </beans>
