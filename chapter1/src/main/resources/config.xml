@@ -18,4 +18,19 @@
     </bean>
 
     <bean id="localDate" class="java.time.LocalDate" factory-method="now"/>
+
+    <bean name="simpleAddress" class="learn.bean.Address">
+        <constructor-arg name="line1" value="151 Corner Street"/>
+        <constructor-arg name="line2" value=""/>
+        <constructor-arg name="city" value="Albany"/>
+        <constructor-arg name="state" value="NY"/>
+        <constructor-arg name="zipCode" value="99999"/>
+        <constructor-arg name="country" value="US"/>
+    </bean>
+
+    <bean name="employee1" class="learn.bean.Employee">
+        <property name="homeAddress" ref="simpleAddress"/>
+        <property name="firstName" value="Junior"/>
+        <property name="lastName" value="Moore"/>
+    </bean>
 </beans>
